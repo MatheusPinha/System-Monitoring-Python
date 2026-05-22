@@ -1,43 +1,55 @@
-PC System Monitor (Python) 🖥️
-Um sistema de monitoramento de hardware desenvolvido em Python para visualização em tempo real do desempenho do computador. Este projeto foi criado com foco em performance, usabilidade e interface moderna para portfólio profissional.
+System Monitoring (Python) 🖥️
+
+Um sistema de monitoramento de hardware desenvolvido em Python para visualização em tempo real do desempenho do computador. Este projeto foi criado com foco em performance, usabilidade corporativa e arquitetura de software limpa, compondo meu portfólio profissional.
 
 🚀 Funcionalidades Principais
-Monitoramento de Hardware: Coleta de dados precisos sobre o uso de CPU, Memória RAM e GPU.
+Monitoramento Integrado: Coleta de dados precisos sobre o uso de CPU, Memória RAM (em % e GB) e processamento da Placa de Vídeo (GPU).
 
-Gestão de Processos: Visualização detalhada dos processos ativos no sistema.
+Tráfego de Rede Dinâmico: Acompanhamento de Download e Upload em tempo real, com formatação inteligente de unidades (B/s, KB/s ou MB/s).
 
-Monitoramento Térmico: Acompanhamento da temperatura dos componentes críticos.
+Visualização Gráfica: Integração nativa com gráficos dinâmicos para análise de comportamento do processador ao longo do tempo.
 
-Visualização Gráfica: Gráficos interativos em tempo real para análise de comportamento do sistema.
+Exportação de Dados: Geração automatizada de relatórios em .csv com o histórico de performance, permitindo análises posteriores em ferramentas de BI.
 
-Sistema de Alertas: Notificações configuráveis para picos de uso ou temperaturas elevadas.
+Arquitetura Escalável: Interface construída utilizando conceitos sólidos de Orientação a Objetos (OOP) e componentização visual.
 
 🛠️ Tecnologias e Bibliotecas
-Este projeto utiliza bibliotecas robustas do ecossistema Python para a coleta de dados e construção de interface:
+Este projeto utiliza bibliotecas robustas do ecossistema Python para a coleta de dados e construção da interface desktop:
 
-psutil: Biblioteca de referência para recuperação de informações sobre processos em execução e utilização do sistema (CPU, memória, discos, rede, sensores).
+psutil: Biblioteca de referência para recuperação de métricas profundas do sistema operacional e hardware.
 
-matplotlib: Utilizada para a geração de gráficos de performance dinâmicos e análise de tendências.
+GPUtil: Utilizada para a extração direta da carga de trabalho e identificação de placas de vídeo NVIDIA.
 
-customtkinter: Framework para a criação de uma interface gráfica (GUI) moderna, com visual sofisticado e suporte a modo escuro.
+matplotlib: Motor de renderização responsável pelo gráfico de linha contínuo embutido na aplicação.
+
+customtkinter: Framework para a criação de uma interface gráfica (GUI) moderna, com visual sofisticado e suporte nativo a modo escuro.
+
+Bibliotecas Nativas (csv, datetime, collections): Para manipulação eficiente de histórico em memória e exportação tabular.
 
 💡 Por que este projeto?
-Este sistema demonstra habilidades essenciais para um desenvolvedor, como:
+Este sistema demonstra habilidades essenciais exigidas pelo mercado de desenvolvimento de software, como:
 
-Manipulação de Recursos do Sistema: Compreensão profunda de como o Python interage com o SO (Operating System).
+Lógica de Automação e SO: Compreensão de como o Python interage diretamente com os recursos físicos da máquina.
 
-Desenvolvimento de GUI: Capacidade de criar interfaces intuitivas e funcionais.
+Ciclo de Vida do Dado: Experiência de ponta a ponta: extração de dados brutos, formatação visual para o usuário final e armazenamento persistente (CSV).
 
-Análise de Dados em Tempo Real: Implementação de loops eficientes para coleta e renderização gráfica de dados.
+Engenharia de Interface: Capacidade de integrar renderização gráfica científica (Matplotlib) dentro de aplicações Desktop comerciais.
 
-Como rodar o projeto
+⚙️ Como rodar o projeto no modo Desenvolvedor
 Clone este repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/MatheusPinha/System-Monitoring-Python.git
 
-Instale as dependências:
-pip install psutil matplotlib customtkinter
+Instale as dependências listadas:
+pip install psutil gputil matplotlib customtkinter
 
 Execute o arquivo principal:
 python main.py
 
-Projeto desenvolvido como parte do meu portfólio profissional.
+📦 Como compilar o projeto (Gerar o .exe final)
+Para transformar este projeto em um executável autônomo do Windows (sem necessidade de instalar o Python na máquina alvo), utilize o PyInstaller:
+pip install pyinstaller
+pyinstaller --noconsole --onefile --collect-all customtkinter main.py
+
+O arquivo final estará disponível dentro da pasta dist/.
+
+Projeto desenvolvido por Matheus Pinha.
